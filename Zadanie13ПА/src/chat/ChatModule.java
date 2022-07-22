@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * Класс Чат
  */
-public class ChatModul {
+public class ChatModule {
   private FileModule fileModule; // объект файлового модуля для работы с историей сообщений
   private String userName; // имя пользователя который запустил чат
   private Scanner sc; // объект сканера для чтения с консоли
@@ -19,9 +19,8 @@ public class ChatModul {
   /**
    * Конструктор класса
    */
-  public ChatModul() throws IOException, InterruptedException {
+  public ChatModule() throws IOException, InterruptedException {
     fileModule = new FileModule(); // создаем объект для работы с файлом истории сообщений
-    
     OutputStreamWriter osw = new OutputStreamWriter(System.out); //объект для определения кодировки консоли
     var codePage =Charset.forName(osw.getEncoding()); 
     sc = new Scanner(System.in, codePage); // создаем объект для чтения из консоли

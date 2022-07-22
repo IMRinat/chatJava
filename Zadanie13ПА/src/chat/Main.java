@@ -13,7 +13,7 @@ public class Main {
    */
 
   public static void main(String[] args) throws IOException, InterruptedException {
-    (new ChatModul()).start(); // Создаем объект чата и запускаем основную функцию
+    (new ChatModule()).start(); // Создаем объект чата и запускаем основную функцию
   }
 
 }
