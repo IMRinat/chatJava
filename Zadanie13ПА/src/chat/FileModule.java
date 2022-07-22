@@ -1,13 +1,14 @@
 package chat;
 
 import java.io.*;
+import java.nio.file.Paths;
 import java.util.*;
 
 /**
  *  Класс для работы с файлом в котором будет храниться история сообщений 
  */
 public class FileModule {
-  private String filePathHistory = "C:\\temp\\chathistory.txt"; // путь к файлу с историе 
+  private String filePathHistory = "chathistory.txt"; // путь к файлу с историе 
   private File file; // объект файл
   private ArrayList<String> history; // список сообщений 
 
@@ -56,7 +57,7 @@ public class FileModule {
     history.clear(); // очищаем список
     do {
       try {
-        var sc = new Scanner(file); // создаем объект сканер
+        var sc = new Scanner(Paths.get("").toAbsolutePath()+"\\"+file); // создаем объект сканер
         while (sc.hasNextLine()) { // проверяем есть ли строка
           var strLine = sc.nextLine(); // читаем строку
           history.add(strLine); // добавляем строку в список
